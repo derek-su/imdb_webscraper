@@ -8,7 +8,7 @@ With the "load more" button in the IMDB user review page, this programs loads al
 and reconnects to the website using the newly acquired data-key.
       
 IMDB split the total reviews of a movie into different pages that can be accessed by combining
-'http://www.imdb.com' + <data-ajaxurl> + '?paginationKey=' + <data-key>
+'http://www.imdb.com' + data-ajaxurl + '?paginationKey=' + data-key
 
-<data-ajaxurl> and <data-key> are variables nested in the class "load-more-data". So, by accessing the new url, another set of reviews appear
-with a new <data-key> being issued for each new page.
+data-ajaxurl and data-key are variables nested in the class "load-more-data". So, by accessing the new url, another set of reviews appear
+with a new data-key being issued for each new page.
