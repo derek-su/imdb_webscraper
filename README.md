@@ -1,5 +1,6 @@
 # imdb_webscrapper
 IMDB Webscrapper - Movie: Spirited Away
+
 This project scrapes the rating and date of review for each user review on the IMDB website for the movie Spirited Away.
 
 NOTE:
