@@ -113,7 +113,7 @@ def scrape_spirited_reviews():
             remove_slash = rating.split('/') 			# Remove the / from all the ratings, making each value an individual index
             popped_numer = remove_slash.pop(0) 			# Pop out all numerator values of each rating
             popped_numer = int(popped_numer)			# Convert the string values into integer values (necessary for plotting the data points later)
-            edited_ratings_list.append(popped_numer) 	# Add these popped numerators into a new list
+            edited_ratings_list.append(popped_numer) 		# Add these popped numerators into a new list
     
     # Execute the Filter Ratings Function
     filter_ratings()
@@ -147,17 +147,17 @@ def scrape_spirited_reviews():
        
     # Import the data from the 2 lists into a scatterplot
 
-    plt.plot_date(datetime_list, edited_ratings_list, c = 'blue')		# Plot_date because of x-axis being datetime format (instead of .scatter)
+    plt.plot_date(datetime_list, edited_ratings_list, c = 'blue')	# Plot_date because of x-axis being datetime format (instead of .scatter)
 
     plt.gca().xaxis.set_major_formatter(mdates.DateFormatter('%b %Y'))  # Set the x-axis to have ticks in the form of abbreviated month and full year
     plt.gca().xaxis.set_major_locator(mdates.MonthLocator(interval=6))  # Set the x-axis to have an interval of 6 months per tick
-    plt.yticks(np.arange(0, 11, 2))										# Have the y-axis have a range from 0-10 with an interval of 2 per tick
-    plt.setp(plt.gca().xaxis.get_majorticklabels(),'rotation', 90)		# Rotate each x-axis tick label to be 90 degrees from horizontal (aka vertical)
-    plt.gcf().set_size_inches((20, 10))									# Set the graph to be a size of 20 x 10 inches
+    plt.yticks(np.arange(0, 11, 2))					# Have the y-axis have a range from 0-10 with an interval of 2 per tick
+    plt.setp(plt.gca().xaxis.get_majorticklabels(),'rotation', 90)	# Rotate each x-axis tick label to be 90 degrees from horizontal (aka vertical)
+    plt.gcf().set_size_inches((20, 10))					# Set the graph to be a size of 20 x 10 inches
     plt.xlabel('Date of Posted Review')
     plt.ylabel('Rating (out of 10)')
     plt.title('Ratings of Spirited Away Over the Years')
-    plt.show()															# Show the graph
+    plt.show()								# Show the graph
     
     print('\nScrapping Completed.')
     print('\nTotal Data Points: ')
